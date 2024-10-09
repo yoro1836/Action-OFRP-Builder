@@ -105,6 +105,7 @@ jobs:
 
     - name: Building recovery
       run: |
+        export OF_USE_LZMA_COMPRESSION=true
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         set +e
         source build/envsetup.sh
